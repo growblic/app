@@ -1,74 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Growblic - Build Digital Products</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Growblic - Digital Products Company</title>
 
 <style>
     body {
         margin: 0;
         padding: 0;
-        font-family: 'Segoe UI', sans-serif;
-        background: #0d0d0d;
+        font-family: Arial, sans-serif;
+        background-color: black;
         color: white;
         overflow-x: hidden;
     }
 
-    /* --- Navbar --- */
+    /* NAVBAR */
     .navbar {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 20px 60px;
         display: flex;
         justify-content: space-between;
-        padding: 20px 60px;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 100;
-        background: transparent;
+        z-index: 999;
     }
 
-    .nav-links a {
+    .navbar a {
         color: #ccc;
-        margin-left: 30px;
+        margin-left: 20px;
         text-decoration: none;
-        font-weight: 500;
+        font-size: 16px;
         transition: 0.3s;
     }
 
-    .nav-links a:hover {
+    .navbar a:hover {
         color: white;
     }
 
-    /* --- Hero Section --- */
+    /* HERO SECTION */
     .hero {
         height: 100vh;
-        display: flex;
-        align-items: center;
-        padding-left: 60px;
-        background: url('https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=1600&q=80');
+        background-image: url('https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=1600&q=80');
         background-size: cover;
         background-position: center;
         position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 60px;
     }
 
-    /* Dark overlay */
     .hero::after {
         content: "";
         position: absolute;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         background: rgba(0,0,0,0.6);
     }
 
-    /* Hero content */
     .hero-content {
         position: relative;
         max-width: 600px;
-        animation: slideUp 1.6s ease-out forwards;
+        animation: fadeInUp 1.2s ease;
     }
 
     .hero-title {
-        font-size: 64px;
-        font-weight: 700;
+        font-size: 58px;
+        font-weight: bold;
         line-height: 1.1;
-        margin
+        margin: 0;
+    }
+
+    .hero-subtitle {
+        margin-top: 20px;
+        font-size: 20px;
+        color: #ddd;
+    }
+
+    .cta-btn {
+        margin-top: 40px;
+        padding: 14px 28px;
+        background: white;
+        color: black;
+        border-radius: 8px;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 18px;
+        transition: 0.3s;
+    }
+
+    .cta-btn:hover {
+        opacity: 0.8;
+    }
+
+    /* ANIMATION */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div style="font-size: 24px; font-weight:bold;">Growblic</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+
+<!-- HERO SECTION -->
+<div class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">Crafting the Future of<br>Digital Products</h1>
+        <p class="hero-subtitle">We build apps, software, and intelligent digital solutions for modern businesses.</p>
+        <a class="cta-btn" href="services.html">Explore Services</a>
+    </div>
+</div>
+
+</body>
+</html>
