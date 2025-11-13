@@ -1,35 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Growblic - Digital Innovation Company</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-        body { font-family: Arial; margin:0; padding:40px; text-align:center; background:#f8f8f8; }
-        nav a { margin: 0 15px; text-decoration:none; color:#0073e6; font-weight:bold; }
-        .btn { padding:12px 20px; background:#0073e6; color:white; text-decoration:none; border-radius:6px; }
-        .box { background:white; padding:30px; border-radius:10px; width:80%; margin:auto; box-shadow:0 0 10px #ccc; }
-    </style>
-</head>
-<body>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Growblic - Build Digital Products</title>
 
-<h1>Growblic</h1>
-<p><b>We build Apps, Digital Products & Modern Software Solutions.</b></p>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: #0d0d0d;
+        color: white;
+        overflow-x: hidden;
+    }
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-</nav>
+    /* --- Navbar --- */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 60px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+        background: transparent;
+    }
 
-<br><br>
+    .nav-links a {
+        color: #ccc;
+        margin-left: 30px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.3s;
+    }
 
-<div class="box">
-    <h2>Grow Your Business With Growblic</h2>
-    <p>We help businesses build powerful apps, websites and digital platforms.</p>
-    <a href="services.html" class="btn">View Our Services</a>
-</div>
+    .nav-links a:hover {
+        color: white;
+    }
 
-</body>
-</html>
+    /* --- Hero Section --- */
+    .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding-left: 60px;
+        background: url('https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=1600&q=80');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    /* Dark overlay */
+    .hero::after {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.6);
+    }
+
+    /* Hero content */
+    .hero-content {
+        position: relative;
+        max-width: 600px;
+        animation: slideUp 1.6s ease-out forwards;
+    }
+
+    .hero-title {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 1.1;
+        margin
